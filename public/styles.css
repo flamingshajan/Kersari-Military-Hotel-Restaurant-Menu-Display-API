@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #f5f5f7;
+  --card-bg: #ffffff;
+  --border-subtle: #e5e7eb;
+  --text-main: #111827;
+  --text-muted: #6b7280;
+  --accent: #111827;
+  --veg: #15803d;
+  --nonveg: #b91c1c;
+}
+
+body {
+  font-family: "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: var(--bg);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+.header {
+  text-align: center;
+  padding: 32px 16px 24px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.header h1 {
+  font-family: "SF Pro Display", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+
+.header p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+.main-container {
+  max-width: 960px;
+  margin: 24px auto 40px;
+  padding: 0 20px;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.controls button {
+  font-family: "SF Pro Text", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  background-color: #ffffff;
+  color: var(--accent);
+  cursor: pointer;
+  transition: background-color 0.12s ease, box-shadow 0.12s ease, transform 0.1s ease, border-color 0.12s ease;
+}
+
+.controls button:hover {
+  background-color: #f9fafb;
+  border-color: #111827;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
+  transform: translateY(-1px);
+}
+
+.controls button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(15, 23, 42, 0.08);
+}
+
+.status {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.output {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+.card {
+  background-color: var(--card-bg);
+  border-radius: 18px;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.card-title {
+  font-family: "SF Pro Display", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.price {
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.badge-veg,
+.badge-nonveg {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.badge-veg::before,
+.badge-nonveg::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+}
+
+.badge-veg {
+  color: var(--veg);
+  border-color: rgba(22, 163, 74, 0.18);
+  background-color: rgba(22, 163, 74, 0.02);
+}
+
+.badge-veg::before {
+  background-color: var(--veg);
+}
+
+.badge-nonveg {
+  color: var(--nonveg);
+  border-color: rgba(185, 28, 28, 0.18);
+  background-color: rgba(185, 28, 28, 0.02);
+}
+
+.badge-nonveg::before {
+  background-color: var(--nonveg);
+}
+
+.category-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  border: 1px solid #e5e7eb;
+  margin-left: 4px;
+}
+
+.description {
+  margin-top: 4px;
+  font-size: 0.86rem;
+  color: var(--text-muted);
+}
+
+.category-card {
+  background-color: var(--card-bg);
+  border-radius: 18px;
+  padding: 16px 18px 14px;
+  border: 1px solid var(--border-subtle);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.04);
+  text-align: center;
+}
+
+.category-name {
+  font-family: "SF Pro Display", -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 4px;
+}
+
+.category-count {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+}

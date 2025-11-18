@@ -1,0 +1,21 @@
+{
+  "name": "restaurant-menu-api",
+  "version": "1.0.0",
+  "description": "Restaurant Menu Display API using Node.js, Express, and a simple frontend page.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "restaurant",
+    "menu",
+    "api"
+  ],
+  "author": "Flaming Shajan",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.0"
+  }
+}
